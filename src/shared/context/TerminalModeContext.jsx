@@ -1,29 +1,19 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext } from "react";
+import { useLocalStorage } from "@/shared/hooks/useLocalStorage";
 
-const TerminalModeContext = createContext();
+export const TerminalModeContext = createContext(null);
 
 export function TerminalModeProvider({ children }) {
-  const [terminalMode, setTerminalMode] = useState(false);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("terminal-mode");
-    if (saved) setTerminalMode(JSON.parse(saved));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("terminal-mode", JSON.stringify(terminalMode));
-  }, [terminalMode]);
+  const [terminalMode, setTerminalMode] = useLocalStorage(
+    "terminal-mode",
+    false,
+  );
 
   return (
     <TerminalModeContext.Provider value={{ terminalMode, setTerminalMode }}>
       {children}
     </TerminalModeContext.Provider>
   );
-}
-
-/** @returns {{ terminalMode: boolean, setTerminalMode: (value: boolean) => void }} */
-export function useTerminalMode() {
-  return useContext(TerminalModeContext);
 }

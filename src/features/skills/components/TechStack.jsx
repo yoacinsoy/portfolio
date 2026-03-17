@@ -2,11 +2,11 @@
 
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
-import TechIcon from "@/features/about/components/TechIcon";
+import TechIcon from "@/features/skills/components/TechIcon";
 import {
   POPULAR_TECH,
   TECH_CATEGORIES,
-} from "@/features/about/data/tech-stack";
+} from "@/features/skills/data/tech-stack";
 
 export default function TechStack() {
   const [open, setOpen] = useState(false);

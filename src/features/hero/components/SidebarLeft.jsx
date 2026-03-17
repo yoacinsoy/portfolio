@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/features/hero/constants/nav-links";
-import { useTerminalMode } from "@/shared/context/TerminalModeContext";
+import { useTerminalMode } from "@/shared/hooks/useTerminalMode";
 
 function DefaultSidebar() {
   return (

@@ -1,6 +1,8 @@
 import About from "@/features/about/components/About";
+import Contact from "@/features/contact/components/Contact";
 import Hero from "@/features/hero/components/Hero";
 import Projects from "@/features/projects/components/Projects";
+import Works from "@/features/works/components/Works";
 import Header from "@/shared/components/layout/Header";
 import Grid from "@/shared/components/ui/Grid";
 import ParticlesBackground from "@/shared/components/ui/ParticlesBackground";
@@ -21,6 +23,8 @@ export default function Home() {
       </section>
 
       <Projects />
+      <Works />
+      <Contact />
     </div>
   );
 }
