@@ -10,20 +10,21 @@ export default function GithubLink() {
             rel="noopener noreferrer"
             aria-label="View profile on GitHub"
             title="View profile on GitHub"
-            className="flex items-center justify-center gap-3
+            className="flex items-center justify-center gap-2
                 bg-zinc-700 hover:bg-zinc-600
                 text-white font-medium
-                px-3 sm:px-6 py-3
+                px-4 py-3
+                md:px-3 md:py-2
                 rounded-lg
                 shadow-[0_0_10px_rgba(255,255,255,0.25)]
                 hover:shadow-lg
                 transition-all duration-200
                 focus:outline-none focus:ring-2 focus:ring-white/50
-                w-auto sm:w-full
-                max-w-xs sm:max-w-sm md:max-w-md
+                w-full md:w-auto
+                max-w-xs md:max-w-fit
             "
         >
-            <GithubIcon aria-hidden="true" size={20} />
+            <GithubIcon aria-hidden="true" size={18} />
 
             <span className="hidden sm:inline whitespace-nowrap">
                 View on GitHub
