@@ -25,11 +25,17 @@ export default function DarkModeToggle() {
                     terminalMode ? "Disable terminal mode" : "Enable terminal mode"
                 }
                 aria-pressed={terminalMode}
-                className="p-2 rounded-lg bg-zinc-200/30 dark:bg-white/5 backdrop-blur-md hover:scale-110 transition-all duration-300 silver-glow hidden sm:inline whitespace-nowrap"
+                className={`p-2 rounded-lg backdrop-blur-md hover:scale-110 transition-all duration-300 hidden sm:inline whitespace-nowrap
+    ${theme === "dark"
+                        ? "silver-glow bg-zinc-900"
+                        : "neon-light bg-zinc-700 border-none!"
+                    }`}
             >
                 <Terminal
                     aria-hidden="true"
-                    className={`w-5 h-5 transition-colors ${terminalMode ? "text-green-400" : "text-zinc-500 dark:text-zinc-400"
+                    className={`w-5 h-5 transition-colors ${terminalMode
+                        ? "text-green-400"
+                        : "text-zinc-500 dark:text-zinc-400"
                         }`}
                 />
             </button>
@@ -42,13 +48,13 @@ export default function DarkModeToggle() {
                 }
                 className={`relative flex items-center w-20 h-10 rounded-full transition-all duration-500 ${theme === "dark"
                     ? "silver-glow bg-zinc-900"
-                    : "neon-light bg-zinc-200"
+                    : "neon-light bg-zinc-300/30"
                     }`}
             >
                 <div
                     className={`absolute flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 transform ${theme === "dark"
                         ? "translate-x-10 bg-zinc-800"
-                        : "translate-x-1 bg-white"
+                        : "translate-x-1"
                         }`}
                 >
                     {theme === "dark" ? (

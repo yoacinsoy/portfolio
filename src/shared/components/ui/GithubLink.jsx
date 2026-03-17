@@ -13,6 +13,7 @@ export default function GithubLink() {
             className="flex items-center justify-center gap-2
                 bg-zinc-700 hover:bg-zinc-600
                 text-white font-medium
+                border-dotted dark:border-solid border-black
                 px-4 py-3
                 md:px-3 md:py-2
                 rounded-lg
