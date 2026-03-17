@@ -23,6 +23,7 @@ export function TerminalModeProvider({ children }) {
   );
 }
 
+/** @returns {{ terminalMode: boolean, setTerminalMode: (value: boolean) => void }} */
 export function useTerminalMode() {
   return useContext(TerminalModeContext);
 }

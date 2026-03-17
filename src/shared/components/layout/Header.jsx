@@ -1,6 +1,6 @@
-import DarkModeToggle from "@/components/ui/DarkModeToggle";
-import GithubLink from "@/components/ui/GithubLink";
-import ResumeButton from "@/components/ui/ResumeButton";
+import DarkModeToggle from "@/shared/components/ui/DarkModeToggle";
+import GithubLink from "@/shared/components/ui/GithubLink";
+import ResumeButton from "@/shared/components/ui/ResumeButton";
 
 export default function Header() {
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TechStack from "@/components/ui/TechStack";
+import TechStack from "@/features/about/components/TechStack";
 
 export default function About() {
   return (

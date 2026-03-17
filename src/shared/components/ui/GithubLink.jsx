@@ -1,10 +1,11 @@
 import { GithubIcon } from "lucide-react";
 import Link from "next/link";
+import { SITE } from "@/config/site";
 
 export default function GithubLink() {
   return (
     <Link
-      href="https://github.com/yoacinsoy"
+      href={SITE.githubUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="View profile on GitHub"

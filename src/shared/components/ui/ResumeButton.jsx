@@ -1,6 +1,7 @@
 import { LucideFileText } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { SITE } from "@/config/site";
+import { Button } from "@/shared/components/ui/button";
 
 export default function ResumeButton() {
   return (
@@ -20,7 +21,7 @@ export default function ResumeButton() {
         cursor-pointer z-60
       "
     >
-      <Link href="/resume">
+      <Link href={SITE.resumeUrl}>
         <LucideFileText
           aria-hidden="true"
           size={18}

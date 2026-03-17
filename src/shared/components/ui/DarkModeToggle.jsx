@@ -3,7 +3,7 @@
 import { Moon, Sun, Terminal } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { useTerminalMode } from "@/context/TerminalModeContext";
+import { useTerminalMode } from "@/shared/context/TerminalModeContext";
 
 export default function DarkModeToggle() {
   const { terminalMode, setTerminalMode } = useTerminalMode();

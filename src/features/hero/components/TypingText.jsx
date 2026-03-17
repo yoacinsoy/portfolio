@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from "react";
 
+/**
+ * Animates through an array of words with a typewriter effect.
+ *
+ * @param {{ words: string[], typingSpeed?: number, deletingSpeed?: number, delayBetween?: number }} props
+ */
 export default function TypingText({
   words = [],
   typingSpeed = 70,

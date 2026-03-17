@@ -1,16 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTerminalMode } from "@/context/TerminalModeContext";
-
-const navLinks = [
-  { label: ".is()", terminalLabel: "whoami", href: "#home" },
-  { label: ".projects()", terminalLabel: "ls projects", href: "#projects" },
-  { label: ".about()", terminalLabel: "cat about.md", href: "#architecture" },
-  { label: ".resume()", terminalLabel: "cat resume.pdf", href: "#stack" },
-  { label: ".works()", terminalLabel: "ls works", href: "#lab" },
-  { label: ".contact()", terminalLabel: "ping contact", href: "#contact" },
-];
+import { NAV_LINKS } from "@/features/hero/constants/nav-links";
+import { useTerminalMode } from "@/shared/context/TerminalModeContext";
 
 function DefaultSidebar() {
   return (
@@ -18,7 +10,7 @@ function DefaultSidebar() {
       aria-label="Page sections"
       className="absolute top-1/2 left-2 sm:left-6 -translate-y-1/2 hidden sm:flex flex-col items-center gap-4 z-40"
     >
-      {navLinks.map(({ label, href }) => (
+      {NAV_LINKS.map(({ label, href }) => (
         <p key={href} className="sidebar-link">
           <a href={href}>{label}</a>
         </p>
@@ -34,7 +26,7 @@ function TerminalSidebar() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % navLinks.length);
+      setActiveIndex((prev) => (prev + 1) % NAV_LINKS.length);
     }, 2500);
 
     return () => clearInterval(interval);
@@ -45,7 +37,7 @@ function TerminalSidebar() {
       aria-label="Page sections"
       className="absolute top-1/2 left-2 sm:left-6 -translate-y-1/2 hidden sm:flex flex-col gap-3 z-40 font-mono text-sm"
     >
-      {navLinks.map(({ terminalLabel, href }, i) => (
+      {NAV_LINKS.map(({ terminalLabel, href }, i) => (
         <a
           key={href}
           href={href}

@@ -1,3 +1,4 @@
+/** @type {import('@/types/project').Project[]} */
 export const projects = [
   {
     id: "rpg-tasks",

@@ -1,8 +1,8 @@
 "use client";
 
-import SidebarLeft from "@/components/navigation/SidebarLeft";
-import SidebarRight from "@/components/navigation/SidebarRight";
-import TypingText from "@/components/ui/TypingText";
+import SidebarLeft from "@/features/hero/components/SidebarLeft";
+import SidebarRight from "@/features/hero/components/SidebarRight";
+import TypingText from "@/features/hero/components/TypingText";
 
 export default function Hero() {
   return (

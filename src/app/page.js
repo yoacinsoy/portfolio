@@ -1,8 +1,9 @@
-import Header from "@/components/layout/Header";
-import Projects from "@/components/sections/Projects";
-import Welcome from "@/components/sections/Welcome";
-import Grid from "@/components/ui/Grid";
-import ParticlesBackground from "@/components/ui/ParticlesBackground";
+import About from "@/features/about/components/About";
+import Hero from "@/features/hero/components/Hero";
+import Projects from "@/features/projects/components/Projects";
+import Header from "@/shared/components/layout/Header";
+import Grid from "@/shared/components/ui/Grid";
+import ParticlesBackground from "@/shared/components/ui/ParticlesBackground";
 
 export default function Home() {
   return (
@@ -10,7 +11,15 @@ export default function Home() {
       <Header />
       <Grid />
       <ParticlesBackground />
-      <Welcome />
+
+      <section
+        id="home"
+        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden z-70"
+      >
+        <Hero />
+        <About />
+      </section>
+
       <Projects />
     </div>
   );
