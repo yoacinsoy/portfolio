@@ -2,12 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Smooth transitions for all elements */
 * {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
@@ -269,20 +267,10 @@ section {
 .sidebar-link {
   @apply rotate-180
 
-  text-[10px]
-  sm:text-[11px]
-  md:text-2xl
-  lg:text-2xl
-
-  font-bold
-  tracking-wide
   [writing-mode:vertical-rl]
 
   transition-all
   duration-300
-
-  text-zinc-600
-  dark:text-zinc-300
 
   drop-shadow-[0_0_4px_rgba(0,0,0,0.2)]
   dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.35)]
@@ -315,4 +303,18 @@ section {
 
 .animate-blink {
   animation: blink 1s step-end infinite;
+}
+
+@keyframes blink-smooth {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-block {
+  animation: blink-smooth 1s ease-in-out infinite;
 }
