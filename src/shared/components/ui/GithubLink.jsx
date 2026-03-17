@@ -3,16 +3,31 @@ import Link from "next/link";
 import { SITE } from "@/config/site";
 
 export default function GithubLink() {
-  return (
-    <Link
-      href={SITE.githubUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View profile on GitHub"
-      className="flex items-center justify-center gap-3 bg-zinc-700 hover:bg-zinc-600 text-white font-medium px-6 py-3 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.25)] hover:shadow-lg transition-all duration-200 w-full max-w-xs sm:max-w-sm md:max-w-md"
-    >
-      <GithubIcon aria-hidden="true" size={20} />
-      <span>View on GitHub</span>
-    </Link>
-  );
+    return (
+        <Link
+            href={SITE.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View profile on GitHub"
+            title="View profile on GitHub"
+            className="flex items-center justify-center gap-3
+                bg-zinc-700 hover:bg-zinc-600
+                text-white font-medium
+                px-3 sm:px-6 py-3
+                rounded-lg
+                shadow-[0_0_10px_rgba(255,255,255,0.25)]
+                hover:shadow-lg
+                transition-all duration-200
+                focus:outline-none focus:ring-2 focus:ring-white/50
+                w-auto sm:w-full
+                max-w-xs sm:max-w-sm md:max-w-md
+            "
+        >
+            <GithubIcon aria-hidden="true" size={20} />
+
+            <span className="hidden sm:inline whitespace-nowrap">
+                View on GitHub
+            </span>
+        </Link>
+    );
 }
