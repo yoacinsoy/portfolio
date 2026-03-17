@@ -1,17 +1,17 @@
-import Header from "@/app/components/layout/Header";
-import Grid from "@/app/components/ui/Grid";
-import ParticlesBackground from "./components/ui/ParticlesBackground";
-import Welcome from "@/app/components/sections/Welcome";
-import Projects from "@/app/components/sections/Projects";
+import Header from "@/components/layout/Header";
+import Projects from "@/components/sections/Projects";
+import Welcome from "@/components/sections/Welcome";
+import Grid from "@/components/ui/Grid";
+import ParticlesBackground from "@/components/ui/ParticlesBackground";
 
 export default function Home() {
-    return (
-        <div className="min-h-screen bg-background font-sans overflow-x-hidden">
-            <Header />
-            <Grid />
-            <ParticlesBackground />
-            <Welcome />
-            <Projects />
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-background font-sans overflow-x-hidden">
+      <Header />
+      <Grid />
+      <ParticlesBackground />
+      <Welcome />
+      <Projects />
+    </div>
+  );
 }
