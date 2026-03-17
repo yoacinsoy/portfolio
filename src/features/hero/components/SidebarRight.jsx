@@ -3,7 +3,7 @@
 import { CircleDot } from "lucide-react";
 import { useState } from "react";
 
-const slides = ["/robin.png", "/hero-background.svg", "/hero-background.svg"];
+const indicators = ["/robin.png", "/hero-background.svg", "/yo.png"];
 
 export default function SidebarRight() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,9 +15,9 @@ export default function SidebarRight() {
     >
       <div className="my-2 h-6 w-px bg-white/30" />
 
-      {slides.map((slide, i) => (
+      {indicators.map((indicator, i) => (
         <button
-          key={slide}
+          key={indicator}
           type="button"
           onClick={() => setCurrentSlide(i)}
           aria-label={`Go to slide ${i + 1}`}

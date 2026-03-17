@@ -1,4 +1,4 @@
-/** @type {import('@/types/project').Project[]} */
+/** @type {import('@/types/project.types').Project[]} */
 export const projects = [
   {
     id: "rpg-tasks",

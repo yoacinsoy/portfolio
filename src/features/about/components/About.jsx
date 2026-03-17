@@ -33,7 +33,7 @@ export default function About() {
           <div className="relative w-full max-w-sm sm:max-w-md">
             <Image
               src="/yo.png"
-              alt="Photo of developer Wallace Henrique Carneiro"
+              alt="Wallace Henrique Carneiro, developer"
               width={1200}
               height={1200}
               className="rounded-2xl w-full h-auto object-cover"

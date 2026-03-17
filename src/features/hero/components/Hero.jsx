@@ -1,5 +1,3 @@
-"use client";
-
 import SidebarLeft from "@/features/hero/components/SidebarLeft";
 import SidebarRight from "@/features/hero/components/SidebarRight";
 import TypingText from "@/features/hero/components/TypingText";

@@ -1,4 +1,4 @@
-/** @type {import('@/types/nav').NavLink[]} */
+/** @type {import('@/types/nav.types').NavLink[]} */
 export const NAV_LINKS = [
   { label: ".is()", terminalLabel: "whoami", href: "#home" },
   { label: ".projects()", terminalLabel: "ls projects", href: "#projects" },

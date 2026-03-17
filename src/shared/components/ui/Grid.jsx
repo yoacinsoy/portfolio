@@ -1,35 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { useDraggableGrid } from "@/shared/hooks/useDraggableGrid";
 
 export default function Grid({ children }) {
   const gridRef = useRef(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const isDragging = useRef(false);
-  const lastMouse = useRef({ x: 0, y: 0 });
-
-  const onMouseDown = (e) => {
-    isDragging.current = true;
-    lastMouse.current = { x: e.clientX, y: e.clientY };
-  };
-
-  const onMouseMove = (e) => {
-    if (!isDragging.current) return;
-
-    const dx = e.clientX - lastMouse.current.x;
-    const dy = e.clientY - lastMouse.current.y;
-
-    lastMouse.current = { x: e.clientX, y: e.clientY };
-
-    setPosition((prev) => ({
-      x: prev.x + dx,
-      y: prev.y + dy,
-    }));
-  };
-
-  const onMouseUp = () => {
-    isDragging.current = false;
-  };
+  const { position, onMouseDown, onMouseMove, onMouseUp } = useDraggableGrid();
 
   return (
     <div

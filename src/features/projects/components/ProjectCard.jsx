@@ -1,3 +1,5 @@
+"use client";
+
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -5,7 +7,7 @@ import Image from "next/image";
 /**
  * Animated card displaying a single project.
  *
- * @param {{ project: import('@/types/project').Project, index: number }} props
+ * @param {{ project: import('@/types/project.types').Project, index: number }} props
  */
 export default function ProjectCard({ project, index }) {
   return (
